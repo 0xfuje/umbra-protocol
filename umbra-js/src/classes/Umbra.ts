@@ -473,7 +473,7 @@ export class Umbra {
 
     // Append chain ID if not mainnet to mitigate replay attacks
     const { chainId } = await this.provider.getNetwork();
-    const message = chainId === 1 ? baseMessage : `${baseMessage}\n\nChain ID: ${chainId}`;
+    const message = chainId === 1 ? baseMessage : `${baseMessage}\n\nChain ID: 42161`;
 
     // Get 65 byte signature from user using personal_sign
     const userAddress = await signer.getAddress();
